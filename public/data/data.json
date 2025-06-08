@@ -1,0 +1,45 @@
+{
+  "sidebarItems": [
+    {
+      "name": "Dashboard",
+      "href": "/adm",
+      "icon": "House"
+    },
+    {
+      "name": "Pedidos",
+      "href": "/adm/pedidos",
+      "icon": "ShoppingCart"
+    },
+    {
+      "name": "Joias",
+      "href": "/adm/joais",
+      "icon": "Gem"
+    },
+    {
+      "name": "Tipos de Joia",
+      "href": "/adm/usuarios",
+      "icon": "List"
+    },
+    {
+      "name": "Clientes",
+      "href": "/adm/usuarios",
+      "icon": "Users"
+    },
+    {
+      "name": "Vendedoras",
+      "href": "/adm/vendedoras",
+      "icon": "CircleUserRound"
+    },
+    {
+      "name": "Maletas",
+      "href": "/adm/usuarios",
+      "icon": "Briefcase"
+    },
+    {
+      "name": "Promocoes",
+      "href": "/adm/promocoes",
+      "icon": "DollarSign"
+    }
+
+  ]
+}
