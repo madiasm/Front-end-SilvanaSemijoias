@@ -1,28 +1,24 @@
+"use client"
+
+import StatCard from '@/app/componentes/cards/statCard'
+import { motion } from 'framer-motion';
+import { DollarSign, ShoppingBag, SquareActivity, Users } from 'lucide-react';
+import React from "react";
+
 export default function AdminDashboardPage() {
   return (
-    <main>
-      <h2 className="text-2xl font-bold mb-4">Dashboard do Admin</h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-gray-500 p-4 rounded shadow">
-          <h3 className="text-lg font-semibold">Total de Joias</h3>
-          <p className="text-2xl">128</p>
-        </div>
-
-        <div className="bg-gray-500 p-4 rounded shadow">
-          <h3 className="text-lg font-semibold">Pedidos Pendentes</h3>
-          <p className="text-2xl">12</p>
-        </div>
-
-        <div className="bg-gray-500 p-4 rounded shadow">
-          <h3 className="text-lg font-semibold">Clientes Ativos</h3>
-          <p className="text-2xl">45</p>
-        </div>
-
-        <div className="bg-gray-500 p-4 rounded shadow">
-          <h3 className="text-lg font-semibold">Promoções Ativas</h3>
-          <p className="text-2xl">3</p>
-        </div>
+    <main className="flex-1 overflow-auto relative z-10">
+      <div className="max-w-7xl mx-auto py-4 px-4 lg:px-8">
+        <motion.div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
+        initial={{opacity:0, y:20}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1}}
+        >
+          <StatCard name="Valor Total" icon={DollarSign} value="$182,450" />
+          <StatCard name="Clientes" icon={Users} value="350" />
+          <StatCard name="Joias em Maletas" icon={ShoppingBag} value="200" />
+          <StatCard name="Joias em Estoque" icon={SquareActivity} value="600" /> 
+        </motion.div>
       </div>
     </main>
   );
