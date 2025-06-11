@@ -27,7 +27,7 @@ export default function VitrineProdutos({ products }: VitrineProps) {
             </div>
           </div>
           
-          <div className="mt-2 text-center">
+          <div className="mt-2 text-center font-serif">
             <p className="truncate text-sm text-[#aa8c38]">{product.description}</p>
             <p className="mt-1 text-base text-[#aa8c38]">
               R$ {product.price.toFixed(2).replace('.', ',')}

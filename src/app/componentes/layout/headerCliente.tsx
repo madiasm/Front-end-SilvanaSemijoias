@@ -11,7 +11,7 @@ export function Header() {
           <Image
             src="/logo.png" 
             alt="Logo da Silvana Semi Joias"
-            width={80} 
+            width={120} 
             height={50}
             className="object-contain"
             priority
@@ -20,7 +20,7 @@ export function Header() {
     
         {/* Menu de navegação */}
         <nav>
-          <ul className="flex items-center space-x-6 text-base font-medium">
+          <ul className="flex items-center space-x-5 text-lg font-serif">
             <li>
               <Link href="/" className="hover:underline transition-colors">
                 Início

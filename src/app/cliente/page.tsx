@@ -1,15 +1,6 @@
 import React from 'react';
-import GaleriaImagens from '../componentes/galeriaColecoes/galeriaImagens';
 import VitrineProdutos from '../componentes/produtos/vitrineProdutos';
-
-const imagensGaleria = [
-  { src: '/joia1.png', alt: 'Descrição da imagem 1' },
-  { src: '/joia2.png', alt: 'Descrição da imagem 2' },
-  { src: '/joia3.png', alt: 'Descrição da imagem 3' },
-  { src: '/joia4.png', alt: 'Descrição da imagem 4' },
-  { src: '/joia5.png', alt: 'Descrição da imagem 5' },
-  { src: '/joia6.png', alt: 'Descrição da imagem 6' },
-];
+import Link from 'next/link';
 
 const meusProdutos = [
   // Linha 1
@@ -64,27 +55,41 @@ export default function ClientePage() {
     // Container principal com a cor de fundo 
     <main className="flex-grow bg-[#f5f5f5]">
       
-      {/* Seção 1: Banner com o Título da Página */}
+      {/* Seção 1: Banner Clicável da Coleção */}
       <section className="bg-[#f5f5f5] py-6">
-        <div className="container mx-auto flex items-center justify-center">
-          <h1 className="rounded-md bg-[#77644f] px-50 py-1 font-serif text-sm uppercase tracking-widest text-white>">
-            COLEÇÃO ENTRE NÓS
-          </h1>
-        </div>
-        <div className="container mx-auto mt-3">
-        <GaleriaImagens images={imagensGaleria} />
+        <div className="container mx-auto">
+          <Link href="/cliente/colecoes">
+            <div className="relative w-full rounded-md overflow-hidden shadow-md">
+              <img
+                src="/banner2.png"
+                alt="Banner Coleção Entre Nós"
+                className="w-full h-full object-cover"
+              />
+              {/* Título sobre a imagem */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <h1 className="rounded-md bg-[#77644fc7] bg-opacity-75 px-8 py-1 font-serif text-xl uppercase tracking-widest text-white shadow-md">
+                  COLEÇÃO ENTRE NÓS
+                </h1>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
       {/* Seção 2: Galeria de Produtos */}
       <section className="bg-[#f5f5f5]">
         <div className="container mx-auto px-4 py-12">
-          <h2 className="mb-8 text-center text-2xl font-bold text-[#77644f]">
-            Nossos Produtos
-          </h2>
-    
+          <h1 className="mb-5 text-center rounded-md bg-[#77644fc7] bg-opacity-75 text-2x1 font-serif text-[#ffffff]">
+            Encontre seu presente perfeito
+          </h1> 
+          {/* Vitrine de Produtos */}
           <VitrineProdutos products={meusProdutos} />
-
+          </div>
+          {/* Botão de Ver Mais */} 
+          <div className="flex justify-center">
+            <button className="rounded-md bg-[#927d66] px-6 py-2 text-sm font-serif text-white hover:bg-[#77644f9a] transition-colors">
+              Ver mais produtos
+            </button>
         </div>
       </section>
     </main>
